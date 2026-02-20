@@ -1,0 +1,7 @@
+OrderID,Date,Product,Category,Region,Sales,Quantity,Revenue_per_unit
+1001,2024-01-01,Laptop,Electronics,South,50000,1,50000.0
+1002,2024-01-02,Mouse,Electronics,North,500,2,250.0
+1003,2024-01-03,Keyboard,Electronics,West,1500,1,1500.0
+1004,2024-01-04,Chair,Furniture,East,7000,1,7000.0
+1005,2024-01-05,Table,Furniture,South,12000,1,12000.0
+1006,2024-01-06,Monitor,Electronics,North,10000,1,10000.0
