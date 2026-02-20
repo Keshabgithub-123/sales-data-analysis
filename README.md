@@ -1,38 +1,30 @@
-# Sales Data Analysis Project
-
-## 📊 Overview
-This project analyzes sales data using Python, SQL, and Power BI to generate business insights.
-
-## 🔧 Tools Used
-- Python (Pandas)
-- SQL (SQLite)
-- Power BI
-
-## 🚀 Features
-- Data cleaning and preprocessing
-- Sales trend analysis
-- Top-performing product identification
-- Region-wise revenue insights
-
-## 📈 Key Insights
-- Electronics category generated highest revenue
-- South region showed strong sales performance
-- High-value products contributed major revenue
-
-## ▶️ How to Run
-1. Install dependencies:
-   pip install -r requirements.txt
-
-2. Run data cleaning:
-   python scripts/data_cleaning.py
-
-3. Open notebook:
-   notebooks/analysis.ipynb
-
-# 📊 Sales Data Analysis Dashboard
+# 📊 Sales Data Analysis & Dashboard
 
 ## 🔍 Overview
-This project analyzes retail sales data to identify key business insights using Python, SQL, and Power BI.
+This project analyzes retail sales data to uncover key business insights and visualize performance using Python, SQL, and Power BI.
+
+The goal is to help businesses track sales trends, identify top-performing products, and understand regional performance for better decision-making.
+
+---
+
+## 📌 Business Problem
+Organizations need to monitor sales performance across regions and categories to:
+- Identify high-revenue products
+- Track monthly sales trends
+- Analyze regional performance
+- Improve business strategies using data-driven insights
+
+---
+
+## 📊 Dataset
+- Source: Superstore Dataset
+- Type: Retail sales data
+- Key Features:
+  - Order Date, Ship Date
+  - Category, Sub-Category
+  - Region
+  - Sales
+  - Profit *(simulated for analysis purposes)*
 
 ---
 
@@ -40,16 +32,18 @@ This project analyzes retail sales data to identify key business insights using 
 - Python (Pandas, NumPy)
 - SQL (SQLite)
 - Power BI
+- Jupyter Notebook
 - VS Code
 
 ---
 
-## 📈 Key Features
-- Data cleaning and preprocessing using Python
-- Exploratory Data Analysis (EDA)
-- Sales trend analysis (monthly)
-- Region-wise and category-wise performance
-- Interactive Power BI dashboard with filters
+## ⚙️ Project Workflow
+1. Data Collection & Loading
+2. Data Cleaning & Preprocessing (Python)
+3. Feature Engineering (Profit, Profit Margin)
+4. Exploratory Data Analysis (EDA)
+5. SQL-based Analysis
+6. Dashboard Creation (Power BI)
 
 ---
 
@@ -58,39 +52,29 @@ This project analyzes retail sales data to identify key business insights using 
 
 ---
 
-## 📌 Key Insights
-- Technology category generated the highest sales
-- West region contributed maximum revenue
-- Sales show seasonal trends across months
-- High-performing sub-categories identified
+## 📈 Key Insights
+- Technology category contributes the highest share of total sales
+- West region generates maximum revenue compared to other regions
+- Sales show clear monthly trends with seasonal spikes
+- Certain sub-categories significantly outperform others in revenue generation
+- Profit margins vary across categories indicating optimization opportunities
 
 ---
 
-## ▶️ How to Run the Project
+## 🗄️ SQL Analysis (Sample Queries)
+```sql
+-- Sales by Category
+SELECT Category, SUM(Sales) AS Total_Sales
+FROM sales
+GROUP BY Category;
 
-1. Install dependencies:
+-- Region-wise Sales
+SELECT Region, SUM(Sales) AS Revenue
+FROM sales
+GROUP BY Region;
 
-2. Run data cleaning script:
-
-3. Open Jupyter Notebook:
-
-4. Open Power BI dashboard:
-
-sales-data-analysis/
-│
-├── data/
-├── scripts/
-├── notebooks/
-├── sql/
-├── dashboard/
-│ ├── dashboard.png
-│ └── sales_dashboard.pbix
-├── README.md
-
-
-## 💼 Use Case
-This project helps businesses:
-- Track sales performance
-- Identify top-performing categories
-- Monitor regional growth
-- Make data-driven decisions
+-- Monthly Sales Trend
+SELECT strftime('%Y-%m', "Order Date") AS Month, SUM(Sales)
+FROM sales
+GROUP BY Month
+ORDER BY Month;
