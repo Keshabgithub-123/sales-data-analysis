@@ -59,6 +59,26 @@ Organizations need to monitor sales performance across regions and categories to
 - Certain sub-categories significantly outperform others in revenue generation
 - Profit margins vary across categories indicating optimization opportunities
 
+
+
+▶️ How to Run the Project
+
+Install dependencies:
+
+pip install pandas numpy jupyter
+
+Run data cleaning script:
+
+python scripts/data_cleaning.py
+
+Open Jupyter Notebook:
+
+notebooks/analysis.ipynb
+
+Open Power BI dashboard:
+
+dashboard/sales_dashboard.pbix
+
 ---
 
 ## 🗄️ SQL Analysis (Sample Queries)
@@ -78,3 +98,6 @@ SELECT strftime('%Y-%m', "Order Date") AS Month, SUM(Sales)
 FROM sales
 GROUP BY Month
 ORDER BY Month;
+
+
+
