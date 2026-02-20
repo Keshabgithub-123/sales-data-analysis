@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Sales Data Analysis Project
 
 ## 📊 Overview
@@ -55,7 +54,7 @@ This project analyzes retail sales data to identify key business insights using 
 ---
 
 ## 📊 Dashboard Preview
-![Dashboard](dashboard/dashboard.png)
+![Dashboard](dashboard/Sales_Data_Analysis_Dashboard.png)
 
 ---
 
